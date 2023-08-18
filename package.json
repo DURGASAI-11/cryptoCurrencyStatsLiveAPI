@@ -4,7 +4,8 @@
   "description": "",
   "main": "crypto.js",
   "scripts": {
-    "start": "nodemon crypto.js"
+    "start": "node crypto.js",
+    "dev":"nodemon crypto.js"
   },
   "author": "durga sai gogi",
   "license": "ISC",
