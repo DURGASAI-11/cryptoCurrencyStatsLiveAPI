@@ -1,0 +1,66 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Cryptocurrency API",
+    "description": "Provides information about various cryptocurrencies",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/": {
+      "get": {
+        "summary": "Welcome message",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "example": "Welcome to the cryptocurrency API"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/cryptocurrencies": {
+      "get": {
+        "summary": "Get information about multiple cryptocurrencies",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "example": []
+              }
+            }
+          }
+        }
+      }
+    },
+    "/cryptocurrencies/{cryptoName}": {
+      "get": {
+        "summary": "Get specific information about a cryptocurrency",
+        "parameters": [
+          {
+            "name": "cryptoName",
+            "in": "path",
+            "required": true,
+            "description": "Name of the cryptocurrency",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "example": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
